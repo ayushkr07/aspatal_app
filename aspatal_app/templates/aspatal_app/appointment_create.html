@@ -1,0 +1,15 @@
+{% extends 'aspatal_app/index.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    Life|create_appointment
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Create an Appointment</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type="submit" value="Create" class="btn btn-default">
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'aspatal_app/index.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+    Life|Create_prof
+{% endblock %}
+{% block content %}
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <input type="submit" value="Create" class="btn btn-default">
+    </form>
+</div>
+{% endblock %}
